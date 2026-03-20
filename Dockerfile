@@ -18,11 +18,13 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 # Install dependencies.
 RUN dnf -y update \
     && dnf -y install \
+       ca-certificates \
        gcc \
        glibc-langpack-en \
        hostname \
        initscripts \
        libffi-devel \
+       openssl \ 
        openssl-devel \
        libyaml-devel \
        python3-devel \
